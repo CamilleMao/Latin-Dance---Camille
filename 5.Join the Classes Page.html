@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+   <!--
+      Author: JIAWEI MAO
+      Date:   03/23/2017
+
+      Filename:         Join the Classes Page.htm
+      Supporting files: modernizr-1.5.js,
+   -->
+
+      <meta charset="UTF-8" />
+      <title>Join Latin Classes!</title>
+      <script src="modernizr-1.5.js"></script>
+      <script src="formjava.js"></script>
+      <link href="FormatForPages2.css" rel="stylesheet" />
+      <link href="forms.css" rel="stylesheet"/>
+
+   </head>
+
+   <body id="FifthPage">
+
+      <header>
+      <a href="1.Dancing World Home Page.html">
+         <img id="dancingworld" src="headers/DancingWorld1.png" alt="Dancing World" />
+      </a>
+      </header> 
+      
+      <nav>
+            <ul>
+               <li><a id="Homebutton" href="1.Dancing World Home Page.html">Home</a></li>
+               <li><a href="2.About Latin Dance Page.html">About<br> Latin Dance</a></li>
+               <li><a href="3.Latin Dance Classes.html">Latin Dance Classes</a></li>
+               <li><a href="4.Message Board.html">Message<br> Board</a></li>
+               <li><a href="5.Join the Classes Page.html">Join<br> the Classes</a></li>
+            </ul>
+      </nav>
+        
+
+   <section id="formpage">
+      <p id="Description">Welcome to join our Latin Dance classes! We have Cha-cha, Rhumba,
+       Salsa, Samba, Mambo, Jive and Tango classes opening now. Please fill in the following
+        information and we will contact you as soon as we receive your quote.<br><br>
+      Required values are marked by an asterisk (*)</p>
+      
+      <br>
+      <form id="survey" name="survey" onsubmit="validateForm(); return false;">
+      
+      <fieldset id="custInfo">
+      	<legend>Customer Information</legend>
+      	<label for="custname">Name *</label>
+      	<input name="custname" id="custname" placeholder="First and last name">
+      	
+      	<label for="street">Street address</label>
+      	<input name="street" id="street"/>
+      	
+      	<label for="city">City</label>
+		<input name="city" id="city" placeholder="Chicago"/> 
+		
+		<label for="state">State (abbr.)</label>
+		<input name="state" id="state" placeholder="IL"/> 
+		
+		<label for="zip">Postal code</label>
+		<input name="zip" id="zip" maxlength="5" placeholder="nnnnn"/>
+		
+		<label for="phone">Phone number *</label>
+		<input name="phone" id="phone301" maxlength="3" placeholder="nnn"/> 
+		<input name="phone" id="phone302" maxlength="3" placeholder="nnn"/> 
+		<input name="phone" id="phone4" maxlength="4" placeholder="nnnn"/> 
+		
+		<label for="email">E-mail *</label>
+		<input name="email" id="email" />
+		
+		<label for="infosrc"> Where did you hear about us?<br/>(select all that apply)</label>
+		<select name="infosrc" id="infosrc" size="5" multiple="multiple">
+			<option value="internet">Internet</option>
+			<option value="mag">Magazine</option>
+			<option value="news">Newspaper</option>
+			<option value="word">Word of Month</option>
+			<option value="other">Other</option>
+		</select>
+      </fieldset>
+      
+      <br>
+      <fieldset id="LatinClassInfo">
+    	<legend>Latin Class Information</legend>
+    	
+    	<label for="begindate">Date Available to Begin *</label>
+		<input type="date" name="begindate" id="begindate" min="2017-04-30" max="2019-04-30">
+
+		<label for="classtype">Class Planned to Join *</label>
+		<select name="classtype" id="classtype" size="7">
+			<option value="type1" selected="selected">Cha-cha</option>
+			<option value="type2">Rhumba</option>
+			<option value="type3">Salsa</option>
+			<option value="type4">Samba</option>
+			<option value="type5">Mambo</option>
+			<option value="type6">Jive</option>
+			<option value="type7">Tango</option>
+		</select>
+		
+		<label id="longlabel1">Please select the time that you are available to take this class: </label>		
+
+	  	<table id="classTimeTable">
+		  <tr>
+			<th>Day</th>
+			<th>Monday</th>
+			<th>Tuesday</th>
+			<th>Wednesday</th>
+			<th>Thursday</th>
+			<th>Friday</th>
+			<th>Saturday</th>
+			<th>Sunday</th>
+		  </tr>
+		
+		  <tr>
+			<td>8:00-10:00am</td>
+			<td><input type="checkbox" name="Mon8-10"/></td>
+			<td><input type="checkbox" name="Tue8-10"/></td>
+			<td><input type="checkbox" name="Wed8-10"/></td>
+			<td><input type="checkbox" name="Thu8-10"/></td>
+			<td><input type="checkbox" name="Fri8-10"/></td>
+			<td><input type="checkbox" name="Sat8-10"/></td>
+			<td><input type="checkbox" name="Sun8-10"/></td>
+		  </tr>
+		  <tr>
+			<td>10:00-12:00am</td>
+			<td><input type="checkbox" name="Mon10-12"/></td>
+			<td><input type="checkbox" name="Tue10-12"/></td>
+			<td><input type="checkbox" name="Wed10-12"/></td>
+			<td><input type="checkbox" name="Thu10-12"/></td>
+			<td><input type="checkbox" name="Fri10-12"/></td>
+			<td><input type="checkbox" name="Sat10-12"/></td>
+			<td><input type="checkbox" name="Sun10-12"/></td>
+			</tr>
+		  <tr>
+			<td>14:00-16:00am</td>
+			<td><input type="checkbox" name="Mon14-16"/></td>
+			<td><input type="checkbox" name="Tue14-16"/></td>
+			<td><input type="checkbox" name="Wed14-16"/></td>
+			<td><input type="checkbox" name="Thu14-16"/></td>
+			<td><input type="checkbox" name="Fri14-16"/></td>
+			<td><input type="checkbox" name="Sat14-16"/></td>
+			<td><input type="checkbox" name="Sun14-16"/></td>
+		  </tr>
+		  <tr>
+			<td>19:30-21:30am</td>
+			<td><input type="checkbox" name="Mon1930-2130"/></td>
+			<td><input type="checkbox" name="Tue1930-2130"/></td>
+			<td><input type="checkbox" name="Wed1930-2130"/></td>
+			<td><input type="checkbox" name="Thu1930-2130"/></td>
+			<td><input type="checkbox" name="Fri1930-2130"/></td>
+			<td><input type="checkbox" name="Sat1930-2130"/></td>
+			<td><input type="checkbox" name="Sun1930-2130"/></td>
+		  </tr>
+		</table>
+		
+		<label id="longlabel2">Was our website useful for you to know about latin dance?</label>
+		<fieldset class="optionGroup">
+			<label for="sYes">Yes</label>
+			<input type="radio" name="useful4latindance" id="uldYes" value="Yes" />
+			<label for="sNo">No</label>
+			<input type="radio" name="useful4latindance" id="uldNo" value="No" />
+		</fieldset>	
+		
+		<label for="comments" id="LongLabel3">We will really appreciate it if you tell us more about what you expect from the latin dance class and our website!</label>
+		<textarea name="comments" id="comments">
+		</textarea>
+		
+      </fieldset>
+      
+    	<label id="newsletter">
+      		<input type="checkbox" name="newscb"/>
+      		E-mail me your newsletter for great coupons and specials!
+     	</label>
+      
+      	<input type="submit" value="Submit Quote" id="submitbutton"> 
+      </form>
+      
+   </section>
+      
+   <footer>
+      <address>
+      <p>
+         Dancing World &bull;
+         3420 Main St, Skokie, IL 60076 &bull;
+         (312) 709-8706 
+      </p>
+      <p>Copyright: Information in this website is from Wikipedia and Google Image</p>
+      </address>
+   </footer>
+
+   </body>
+
+</html>
